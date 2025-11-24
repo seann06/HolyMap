@@ -10,7 +10,7 @@ export default class Gereja extends BaseModel {
 
   @column()
   declare alamat: string
-  
+
   @column()
   declare latitude: string
 
