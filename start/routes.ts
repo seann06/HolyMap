@@ -7,7 +7,8 @@
 |
 */
 
+import GerejasController from '#controllers/gerejas_controller'
 import router from '@adonisjs/core/services/router'
 router.on('/').renderInertia('adminPage')
 
-router.resource('/api/gereja', () => import('#controllers/gerejas_controller')).apiOnly()
+router.resource('/api/gereja', GerejasController).apiOnly()
