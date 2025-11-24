@@ -1,6 +1,6 @@
-name: AdonisJS CI
+name: CI Kelompok 4
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
