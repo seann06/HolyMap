@@ -46,3 +46,4 @@ jobs:
           done
 
       - run: node ace migration:run --force
+      - run: node ace test
