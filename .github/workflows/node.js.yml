@@ -10,11 +10,11 @@ jobs:
       mysql:
         image: mysql:8
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-          MYSQL_ROOT_PASSWORD: ""
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+          MYSQL_ROOT_PASSWORD: ''
           MYSQL_DATABASE: holymap
           MYSQL_USER: github
-          MYSQL_PASSWORD: ""
+          MYSQL_PASSWORD: ''
         ports:
           - 3306:3306
         options: >-
@@ -33,7 +33,7 @@ jobs:
       - run: npm install
 
       - run: cp .env.example .env
-
+      - run: npm run lint
       - name: Wait for MySQL
         run: |
           echo "Waiting for MySQL…"
